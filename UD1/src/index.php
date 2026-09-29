@@ -1,16 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiPagina</title>
+    <title>Mis ejercicios</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
-    <h1>Soy html</h1>
-    <?php 
-    //Todo aqui es código php
-        echo "<h2>Es por la mañana</h2>";
-        echo date('m-d-Y');
+
+    <header>
+        <h1>Ejercicios</h1>
+        <h2>UD1</h2>
+    </header>
+
+    <?php
+
+        $archivos = scandir(".");
+
+        echo "<ul>";
+
+            foreach ($archivos as $archivo) {
+
+                if (str_ends_with($archivo, ".php") && $archivo != "index.php") {
+
+                    echo "<li>";
+                    echo "<a href='$archivo'>$archivo</a>";
+                    echo "</li>";
+                }
+            }
+
+        echo "</ul>";
+
     ?>
+
 </body>
+
 </html>

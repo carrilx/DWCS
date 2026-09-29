@@ -8,11 +8,9 @@ function buscarAnagrama($string1, $string2): bool
         return false;
     }
 
-    for ($i = 0; $i < strlen($string1); $i++) {
-
-        
+    for ($i = 0; $i < strlen($string1); $i++) {  
         $letra = $string1[$i];
-
+        
         if (substr_count($string1, $letra) != substr_count($string2, $letra)) {
             return false;
         }

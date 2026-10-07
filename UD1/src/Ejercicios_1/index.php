@@ -21,18 +21,15 @@
 
         echo "<ul>";
 
-        foreach ($archivos as $archivo) {
+            foreach ($archivos as $archivo) {
 
-            if ($archivo == "." || $archivo == "..") {
-                continue;
-            }
+                if (str_ends_with($archivo, ".php") && $archivo != "index.php") {
 
-            if (is_dir($archivo)) {
-                echo "<li><a href=\"$archivo/\">$archivo/</a></li>";
-            } else {
-                echo "<li><a href=\"$archivo\">$archivo</a></li>";
+                    echo "<li>";
+                    echo "<a href='$archivo'>$archivo</a>";
+                    echo "</li>";
+                }
             }
-        }
 
         echo "</ul>";
 

@@ -2,16 +2,14 @@
 $palabra1 = $_POST["palabra1"];
 $palabra2 = $_POST["palabra2"];
 
-function buscarAnagrama($string1, $string2): bool
+function buscarAnagrama($string1, $string2)
 {
-    if (strlen($string1) != strlen($string2)) {
+    if (strlen($string1)!=strlen($string2)) {
         return false;
     }
-
     for ($i = 0; $i < strlen($string1); $i++) {  
         $letra = $string1[$i];
-        
-        if (substr_count($string1, $letra) != substr_count($string2, $letra)) {
+        if (substr_count($string1, $letra)!=substr_count($string2, $letra)) {
             return false;
         }
     }
@@ -19,9 +17,9 @@ function buscarAnagrama($string1, $string2): bool
 }
 
 if (buscarAnagrama($palabra1, $palabra2)) {
-    echo "Las palabras, $palabra1 y $palabra2 son anagramas";
+    echo " $palabra1 y $palabra2 son anagramas";
 } else {
-    echo "Las palabras, $palabra1 y $palabra2 no son anagramas";
+    echo "$palabra1 y $palabra2 no son anagramas";
 }
 ?>
 

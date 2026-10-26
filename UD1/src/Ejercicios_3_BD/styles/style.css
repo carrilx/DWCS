@@ -1,0 +1,131 @@
+/* Configuración general */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Cabecera */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #263746;
+}
+
+/* Logo */
+
+header img.logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Menú */
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Contenido */
+
+main {
+    width: 90%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+/* Títulos */
+
+h1 {
+    text-align: center;
+}
+
+/* Formularios */
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Botones */
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1c5980;
+}
+
+/* Mensajes */
+
+.mensaje {
+    text-align: center;
+}
+
+/* Imágenes del contenido */
+
+main img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Diseño para móviles */
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    main {
+        padding: 15px;
+    }
+}

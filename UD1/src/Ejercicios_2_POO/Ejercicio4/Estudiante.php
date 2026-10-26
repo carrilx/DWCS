@@ -16,9 +16,6 @@ class Estudiante extends Persona {
         $this->grado = $grado;
     }
 
-    public function mostrarInformacion(){
-        echo $this->getNombre();
-        echo $this->getEdad();
-        echo $this->getGrado();
-    }
+    
+
 }

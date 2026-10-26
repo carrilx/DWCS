@@ -39,6 +39,11 @@ class Persona {
             return false;
         }
     }
+    /**
+     * public function esMayorEdad():bool {
+     * return $this->edad >= 18;
+     * }
+     */
 
 
 }

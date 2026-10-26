@@ -34,9 +34,10 @@ class Direccion{
     }
 
     //Función para utilizar desde Persona(El ejercicio pide hacerla en Persona)
-    public function mostrarDireccion(){
-        echo $this->getCalle();
-        echo $this->getCiudad();
-        echo $this->getCodPost();
+   public function mostrarDireccion(): string {
+        return $this->getCalle() . " ," 
+        . $this->getCiudad() . ", (" 
+        . $this->getCodPost() . ")";
     }
+
 }

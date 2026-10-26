@@ -44,10 +44,10 @@ class Persona {
         }
     }
 
-    public function mostrarDireccion(){
-        echo $this->direccion->getCalle();
-        echo $this->direccion->getCiudad();
-        echo $this->direccion->getCodPost();
-
+    public function mostrarDireccion(): string {
+        return $this->direccion->getCalle() . " ," 
+        . $this->direccion->getCiudad() . ", (" 
+        . $this->direccion->getCodPost() . ")";
     }
+
 }
